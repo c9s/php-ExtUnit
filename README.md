@@ -1,8 +1,7 @@
 ExtUnit
 =============
 
-By using this extension testcase and a phpunit-exttest runner, you 
-can easily integrate phpunit tests with your extension.
+You should forgot the old `run-tests.php` script. This saves your life!
 
 Installation
 ------------
