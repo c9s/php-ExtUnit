@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.10" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0               http://pear.php.net/dtd/tasks-1.0.xsd               http://pear.php.net/dtd/package-2.0               http://pear.php.net/dtd/package-2.0.xsd">
+  <name>ExtUnit</name>
+  <channel>pear.corneltek.com</channel>
+  <summary>Extension Unit Testing Utility</summary>
+  <description>Extension Unit Testing Utility</description>
+  <lead>
+    <name>Yo-An Lin</name>
+    <user/>
+    <email>cornelius.howl@gmail.com</email>
+    <active>yes</active>
+  </lead>
+  <date>2013-03-17</date>
+  <time>01:26:54</time>
+  <version>
+    <release>1.2.0</release>
+    <api>1.2.0</api>
+  </version>
+  <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+  </stability>
+  <license>PHP</license>
+  <notes>-</notes>
+  <contents>
+    <dir name="/">
+      <file name="src/EXTUnit/TestRunner.php" role="php" md5sum="12eeade9ad6cf3ab0d1bcb9123bbcfa6"/>
+      <file name="src/EXTUnit.php" role="php" md5sum="7d485001d05bd4b5a3f34d42253821e2"/>
+      <file name="bin/extunit" role="script" md5sum="7ff7427ca91e4e92fb6a33d6b4eb1bfd"/>
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.3</min>
+      </php>
+      <pearinstaller>
+        <min>1.4</min>
+      </pearinstaller>
+      <package>
+        <name>PHPUnit_Framework_ExtensionTestCase</name>
+        <channel>pear.corneltek.com</channel>
+        <min>0.0.0</min>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease>
+    <filelist>
+      <install name="src/EXTUnit/TestRunner.php" as="EXTUnit/TestRunner.php"/>
+      <install name="src/EXTUnit.php" as="EXTUnit.php"/>
+      <install name="bin/extunit" as="extunit"/>
+    </filelist>
+  </phprelease>
+</package>
