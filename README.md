@@ -27,19 +27,25 @@ Create the extunit config file for your extension:
 </extunit>
 ```
 
-e.g., to load the compiled extension and run specific php script:
+e.g., To load the compiled extension and run specific php script:
 
 ```sh
 $ extunit php_script.php
 ```
 
-to load the compiled extension and run the php script with gdb:
+To load the compiled extension and run the php script with gdb:
 
 ```sh
 $ extunit --gdb php_script.php
 ```
 
-to load the compiled extension and run gdn with phpunit:
+The above command generates the `.gdbinit` file, which setup the executable path and the arguments 
+for you. so you don't need to write the php option arguments by yourself.
+
+note that `extunit` won't override the `.gdbinit` for you, so if you want to run other test files with gdb
+you should remove the generated `.gdbinit` file before you run another test file.
+
+To load the compiled extension and run gdn with phpunit:
 
 ```sh
 $ extunit --phpunit --gdb tests/APCExtensionTest.php
