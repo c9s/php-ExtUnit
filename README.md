@@ -5,19 +5,29 @@ You should forgot the old `run-tests.php` script. This saves your life!
 
 ![Screenshot](http://images.plurk.com/yjqO-46eQ3xA2IgA69F3hcuMVOc.jpg)
 
+
+Merit:
+
+- Always re-compile you source code before you test it.
+- Autoload your compiled extension `.so` file before you run the tests.
+- Run phpunit tests without installing your extension everytime.
+- Run unit tests with your PHP extension or with your pure PHP implementation.
+- Support GDB, automatically write `.gdbinit` to bootstrap the GDB environment.
+
 Installation
 ------------
 
-    $ pear channel-discover pear.corneltek.com
-    $ pear install corneltek/ExtUnit
+```sh
+$ pear channel-discover pear.corneltek.com
+$ pear install corneltek/ExtUnit
+```
 
 Usage
 ------
 
 The extunit runner helps you debug and test your extension, it 
-compiles your extension and load your extension so file in the `modules` directory before 
-you test it.
-
+compiles your extension and load your extension `.so` file from the `modules` directory before 
+you run the tests or script.
 
 Create the extunit config file for your extension:
 
