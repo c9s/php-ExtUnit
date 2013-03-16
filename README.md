@@ -5,7 +5,7 @@ You should forgot the old `run-tests.php` script. This saves your life!
 
 ![Screenshot](http://images.plurk.com/yjqO-46eQ3xA2IgA69F3hcuMVOc.jpg)
 
-![Screenshot](http://img.im/i/src-13116-pvtr66/8000.jpg)
+extunit with gdb: <http://img.im/i/src-13116-pvtr66/8000.jpg>
 
 
 Merit:
