@@ -14,6 +14,7 @@ before_script:
   - php onion -q install
   - php onion build
   - pear install -f package.xml
+  - phpenv rehash
 
 script:
   - phpunit
