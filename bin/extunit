@@ -11,12 +11,21 @@ function findbin($bin)
     }
 }
 
+function system_stop_on_failure($command)
+{
+    system($command, $retval);
+    if ( $retval === false || $retval !== 0 ) {
+        exit($retval);
+    }
+}
+
 require "EXTUnit/TestRunner.php";
 require "EXTUnit.php";
 
 $longopts  = array(
     "gdb", // for gdb
     "phpunit",
+    "phpize",
 );
 $options = getopt("", $longopts);
 
@@ -29,14 +38,25 @@ foreach( $longopts as $opt ) {
     }
 }
 
+
 $script = array_shift( $argv );
 
-if ( file_exists('Makefile') ) {
-    system('make > /dev/null', $retval);
-    if ( $retval === false || $retval !== 0 ) {
-        exit();
-    }
+
+if ( isset($options['phpize']) ) {
+    echo "Running phpize...\n";
+    system_stop_on_failure('phpize');
+
+    echo "Running configure...\n";
+    // XXX: read configure options from extunit.xml
+    system_stop_on_failure('./configure');
 }
+
+
+if ( file_exists('Makefile') ) {
+    echo "Building...\n";
+    system_stop_on_failure('make > /dev/null');
+}
+
 
 $extunit = new EXTUnit("extunit.xml");
 
