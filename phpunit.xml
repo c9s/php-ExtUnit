@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit
-    bootstrap="tests/bootstrap.php"
     backupGlobals="false"
     verbose="true"
+    debug="true"
     syntaxCheck="true"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
-    convertWarningsToExceptions="true">
+    convertWarningsToExceptions="true"
+    bootstrap="tests/bootstrap.php">
+
+    <testsuites>
+        <testsuite name="Test">
+            <directory>tests/EXTUnitTest.php</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
