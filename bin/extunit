@@ -21,6 +21,7 @@ function system_stop_on_failure($command)
 
 require "EXTUnit/TestRunner.php";
 require "EXTUnit.php";
+require "CLIFramework/Formatter.php";
 
 $longopts  = array(
     "gdb", // for gdb
@@ -29,6 +30,7 @@ $longopts  = array(
 );
 $options = getopt("", $longopts);
 
+$formatter = new CLIFramework\Formatter;
 
 // remove options from argv
 foreach( $longopts as $opt ) {
@@ -42,18 +44,18 @@ foreach( $longopts as $opt ) {
 $script = array_shift( $argv );
 
 
-if ( isset($options['phpize']) ) {
-    echo "Running phpize...\n";
+if ( isset($options['phpize']) || (! file_exists('configure') && ! file_exists('Makefile') ) ) {
+    echo $formatter->format("Running phpize...\n","green");
     system_stop_on_failure('phpize');
 
-    echo "Running configure...\n";
+    echo $formatter->format("Running configure...\n","green");
     // XXX: read configure options from extunit.xml
     system_stop_on_failure('./configure');
 }
 
 
 if ( file_exists('Makefile') ) {
-    echo "Building...\n";
+    echo $formatter->format("Building...\n","green");
     system_stop_on_failure('make > /dev/null');
 }
 
