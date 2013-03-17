@@ -22,7 +22,7 @@ Installation
 
 ```sh
 $ pear channel-discover pear.corneltek.com
-$ pear install corneltek/ExtUnit
+$ pear install -a -f corneltek/ExtUnit
 ```
 
 Usage
@@ -59,12 +59,22 @@ for you. so you don't need to write the php option arguments by yourself.
 note that `extunit` won't override the `.gdbinit` for you, so if you want to run other test files with gdb
 you should remove the generated `.gdbinit` file before you run another test file.
 
+
+To run phpize and configure before building the extension:
+
+```sh
+$ extunit --phpize --phpunit
+```
+
+
+
 To load the compiled extension and run gdn with phpunit:
 
 ```sh
-$ extunit --phpunit --gdb tests/APCExtensionTest.php
+$ extunit --gdb --phpunit --debug tests/APCExtensionTest.php
 ```
 
-To use the extension testcase please see `PHPUnit_Framework_ExtensionTestCase` class.
+The extra options will be passed to phpunit, so that you can the `--debug` option from phpunit.
 
+To use the extension testcase please see `PHPUnit_Framework_ExtensionTestCase` class.
 
