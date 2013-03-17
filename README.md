@@ -7,6 +7,8 @@ You should forgot the old `run-tests.php` script. This saves your life!
 
 extunit with gdb: <http://img.im/i/src-13116-pvtr66/8000.jpg>
 
+master: [![Build Status](https://travis-ci.org/c9s/php-ExtUnit.png)](https://travis-ci.org/c9s/php-ExtUnit)
+
 
 Merit:
 
