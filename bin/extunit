@@ -44,7 +44,11 @@ foreach( $longopts as $opt ) {
 $script = array_shift( $argv );
 
 
-if ( isset($options['phpize']) || (! file_exists('configure') && ! file_exists('Makefile') ) ) {
+if ( file_exists('config.m4') 
+        && ( isset($options['phpize']) 
+            || (! file_exists('configure') && ! file_exists('Makefile') ) )
+) {
+
     echo $formatter->format("Running phpize...\n","green");
     system_stop_on_failure('phpize');
 
