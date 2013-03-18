@@ -125,14 +125,14 @@ class EXTUnit_TestRunner
                     die("Can not write .gdbinit");
                 }
             }
-            passthru("gdb");
+            return passthru("gdb");
         } else {
             $command = $this->program 
                     . ' ' . join(' ',$this->getPHPOptionArguments())
                     . ' ' . join(' ',$this->getArguments())
                     ;
             echo $command , "\n";
-            passthru($command);
+            return passthru($command);
         }
     }
 
