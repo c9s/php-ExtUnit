@@ -78,4 +78,4 @@ if ( isset($options['gdb']) ) {
 if ( isset($options['phpunit']) ) {
     $extunit->enablePHPUnit = true;
 }
-$extunit->run($argv);
+return $extunit->run($argv);
