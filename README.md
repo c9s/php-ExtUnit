@@ -66,6 +66,12 @@ To run phpize and configure before building the extension:
 $ extunit --phpize --phpunit
 ```
 
+To run phpunit with filter option and repeat 5 times:
+
+```sh
+$ extunit --phpunit --debug --filter testRmtree --repeat 5
+```
+
 
 
 To load the compiled extension and run gdn with phpunit:
