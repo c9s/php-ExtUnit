@@ -10,11 +10,11 @@
     <email>cornelius.howl@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2013-03-17</date>
-  <time>22:08:17</time>
+  <date>2013-03-18</date>
+  <time>21:48:28</time>
   <version>
-    <release>1.3.0</release>
-    <api>1.3.0</api>
+    <release>1.4.0</release>
+    <api>1.4.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -24,9 +24,9 @@
   <notes>-</notes>
   <contents>
     <dir name="/">
-      <file name="src/EXTUnit/TestRunner.php" role="php" md5sum="12eeade9ad6cf3ab0d1bcb9123bbcfa6"/>
+      <file name="src/EXTUnit/TestRunner.php" role="php" md5sum="2fe34331a076303e58a1ac6a80213b2c"/>
       <file name="src/EXTUnit.php" role="php" md5sum="7d485001d05bd4b5a3f34d42253821e2"/>
-      <file name="bin/extunit" role="script" md5sum="0026e0f65d9a18c118b3fcde46706766"/>
+      <file name="bin/extunit" role="script" md5sum="ab94e3cfb9cb77e18172c661d2eba804"/>
     </dir>
   </contents>
   <dependencies>
